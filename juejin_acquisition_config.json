@@ -1,0 +1,43 @@
+{
+  "$schema": "掘金获客配置 v2.0",
+  "$description": "AI驱动掘金评论区获客 — 参考知乎获客技能架构",
+
+  "keywords": [
+    "API中转",
+    "OpenClaw",
+    "AI大模型",
+    "Token",
+    "DeepSeek",
+    "阿里云百炼"
+  ],
+
+  "scoring": {
+    "view_weight": 40,
+    "interaction_weight": 30,
+    "timeliness_weight": 20,
+    "quality_weight": 10
+  },
+
+  "filters": {
+    "min_view_count": 0,
+    "min_comment_count": 0,
+    "max_days_old": 365,
+    "top_n": 10
+  },
+
+  "anti_crawl": {
+    "work_hours": { "start": 8, "end": 23 },
+    "daily": { "max_comments": 20, "max_messages": 10 },
+    "hourly": { "max_comments": 5, "max_messages": 3 },
+    "delays": {
+      "between_comments": { "min": 30, "max": 90 },
+      "between_messages": { "min": 60, "max": 120 },
+      "between_searches": { "min": 3, "max": 8 },
+      "between_keywords": { "min": 5, "max": 15 }
+    },
+    "retry": { "max_attempts": 3, "base_delay": 20 }
+  },
+
+  "comment_templates": [],
+  "message_templates": []
+}
