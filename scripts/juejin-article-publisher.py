@@ -39,8 +39,8 @@ sys.path.insert(0, str(SCRIPT_DIR))
 # 导入共享 LLM 模块
 _LLM_SEARCH_PATHS = [
     os.path.join(SCRIPT_DIR, "zhihu_llm.py"),
-    os.path.join(SCRIPT_DIR, "..", "..", "zhihu-campaign", "scripts", "zhihu_llm.py"),
-    os.path.expanduser("~/.openclaw/workspace/skills/zhihu-campaign/scripts/zhihu_llm.py"),
+    
+    
 ]
 _LLM_MODULE_PATH = None
 for p in _LLM_SEARCH_PATHS:

@@ -36,9 +36,9 @@ _LLM_MODULE = None
 # 优先从 zhihu-campaign 共享模块导入
 _LLM_SEARCH_PATHS = [
     os.path.join(SCRIPT_DIR, "zhihu_llm.py"),
-    os.path.join(os.path.dirname(SCRIPT_DIR), "..", "zhihu-campaign", "scripts", "zhihu_llm.py"),
-    os.path.join(os.path.dirname(SCRIPT_DIR), "..", "..", "zhihu-campaign", "scripts", "zhihu_llm.py"),
-    os.path.expanduser("~/.openclaw/workspace/skills/zhihu-campaign/scripts/zhihu_llm.py"),
+    
+    
+    
 ]
 _LLM_MODULE_PATH = None
 for p in _LLM_SEARCH_PATHS:
