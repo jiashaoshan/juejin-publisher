@@ -20,9 +20,9 @@ metadata:
 
 | 功能 | 脚本 | 说明 |
 |------|------|------|
-| 📝 **文章生成+发布** | `juejin-article-publisher.py` | LLM生成技术文章 → 人工确认 → BW发布 |
+| 📝 **文章生成+发布** | `juejin-article-publisher.py` | LLM生成技术文章 → 人工确认 → API发布 |
 | 💬 **评论区获客** | `juejin_acquisition.py` | 搜索 → AI四维评分 → LLM评论 → LLM私信 |
-| 📊 **文章查询** | `publish.py` | Markdown文章一键发布（API方式） |
+| 📄 **Markdown发布** | `publish.py` | Markdown文章一键发布（API方式） |
 
 ---
 
@@ -32,7 +32,7 @@ metadata:
 
 ```
 产品链接 → LLM读取网站 → 生成技术文章(标题+正文) 
-→ 保存草稿(.md) → 人工确认 → Pexels封面 → BrowserWing发布
+→ 保存草稿(.md) → 人工确认 → Pexels封面 → API直发发布
 ```
 
 ### 快速使用
@@ -58,8 +58,8 @@ python3 scripts/juejin-article-publisher.py --product-url "https://ai.hcrzx.com/
 
 ### 前置条件
 
-- **BrowserWing 脚本**: 需要录制一个掘金文章发布脚本（变量：`${标题}`、`${正文}`、`${封面}`）
-- 录制完成后将脚本ID写入环境变量 `JUEJIN_BW_SCRIPT_ID` 或修改脚本中的 `PUBLISH_SCRIPT_ID`
+- **掘金 Cookie**: 需要在 `juejin.env` 文件中配置有效的掘金登录 Cookie
+- **Pexels API Key**: 封面图片使用 Pexels API（已内置）
 
 ---
 
